@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<link rel=StyleSheet type=text/css th:href="styleSheet.css" />
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header th:fragment="head">
+
+
+            <div class="header">
+                <a href="#default" class="logo">Podlike</a>
+                <div class="header-right">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#contact">Suche</a>
+                    <a th:href="@{/Anmelden.html}">Benutzer</a>
+                </div>
+            </div>
+</header>
+
+</body>
+</html>
