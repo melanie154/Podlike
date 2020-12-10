@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
 <head>
- <link rel=StyleSheet type=text/css th:href="styleSheet.css" />
+    <link rel=StyleSheet type=text/css th:href="styleSheet.css" />
 
     <div th:replace="Header.html :: head"></div>
     <style>
@@ -10,64 +10,71 @@
 	background-color: aqua;
 }
     </style>
-           
+
 </head>
 
 <body>
 <ul>
-  <li><a th:href="@{/}">Bibliothek</a></li>
-  <li><a href="news.asp">Podcast 1</a></li>
-  <li><a href="contact.asp">Podcast 2</a></li>
-  <li><a href="about.asp">Podcast 3</a></li>
+    <li><a th:href="@{/}">Bibliothek</a></li>
+    <li><a href="news.asp">Podcast 1</a></li>
+    <li><a href="contact.asp">Podcast 2</a></li>
+    <li><a href="about.asp">Podcast 3</a></li>
 </ul>
-    <div class="teilÜ">Weiterh&oumlren
-        <br> 
-        <br>
-        
-        <div class="gallery">
-          
-            <img src="/ts_Cover.jpg">
-            <div class="desc">Tagesschau</div>
-        </div>
-        
-         <div class="gallery">
-          <a target="_blank" href="/fire_Cover.jpg">
-            <img src="/fire_Cover.jpg">
-          </a>
-            <div class="desc">On Fire</div>
-        </div>
-        <br> 
-        <br>
-        
+
+<section id="body">
+    <ul>
+        <li th:each="p : ${fruits}"><span class="user" th:text="${p}">Dummy</span></li>
+    </ul>
+</section>
+
+<div class="teilÜ">Weiterh&oumlren
+    <br>
+    <br>
+
+    <div class="gallery">
+
+        <img src="/ts_Cover.jpg">
+        <div class="desc">Tagesschau</div>
     </div>
-    <br> 
-        <br>
-        <br> 
-        <br>
-        <br> 
-        <br>
-        <br> <br> 
-        
-        
-    <div class="teilÜ">K&oumlnnte dir gefallen
-        <br> 
-        <br>
-        
-        <div class="gallery">
-          <a target="_blank" href="/ts_Cover.jpg">
-            <img src="/ts_Cover.jpg">
-          </a>
-            <div class="desc">Tagesschau</div>
-        </div>
-        
-         <div class="gallery">
-          <a target="_blank" href="/fire_Cover.jpg">
+
+    <div class="gallery">
+        <a target="_blank" href="/fire_Cover.jpg">
             <img src="/fire_Cover.jpg">
-          </a>
-            <div class="desc">On Fire</div>
-        </div>
+        </a>
+        <div class="desc">On Fire</div>
     </div>
+    <br>
+    <br>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> <br>
+
+
+<div class="teilÜ">K&oumlnnte dir gefallen
+    <br>
+    <br>
+
+    <div class="gallery">
+        <a target="_blank" href="/ts_Cover.jpg">
+            <img src="/ts_Cover.jpg">
+        </a>
+        <div class="desc">Tagesschau</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="/fire_Cover.jpg">
+            <img src="/fire_Cover.jpg">
+        </a>
+        <div class="desc">On Fire</div>
+    </div>
+</div>
 </body>
-    
-  </form>
+
+</form>
 </html>
